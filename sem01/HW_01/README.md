@@ -70,3 +70,5 @@
             return gson.fromJson(json, Person.class);
         }
     ~~~
+
+Описание и реализация класса [Person](https://github.com/UrijVig/spring/blob/master/sem01/HW_01/src/main/java/org/example/Person.java)
