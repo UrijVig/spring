@@ -49,9 +49,8 @@ public class UserController implements iController{
         model.addAttribute("user", user);
         return "user-update";
     }
-    @PostMapping("/user-update/{id}")
-    public String updateUserById(@PathVariable int id, User user) {
-        user.setId(id);
+    @PostMapping("/user-update")
+    public String updateUserById(User user) {
         service.updateUserById(user);
         return "redirect:/users";
     }
