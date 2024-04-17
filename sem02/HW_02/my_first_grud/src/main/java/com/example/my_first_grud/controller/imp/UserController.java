@@ -3,6 +3,7 @@ package com.example.my_first_grud.controller.imp;
 import com.example.my_first_grud.controller.iController;
 import com.example.my_first_grud.model.User;
 import com.example.my_first_grud.service.iService;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 @Component
+@Log
 public class UserController implements iController{
     @Autowired
     private iService service;
@@ -19,8 +21,6 @@ public class UserController implements iController{
     @GetMapping("/users")
     public String findAll(Model model){
         List<User> users = service.findAll();
-
-
         model.addAttribute("users", users);
         return "user-list";
         //return "home.html";

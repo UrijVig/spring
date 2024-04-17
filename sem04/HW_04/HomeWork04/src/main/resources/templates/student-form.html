@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Добро пожаловать!</h1>
+    <h3>Список зарегистрированных студентов:</h3>
+
+    <table>
+        <tr>
+            <th>Имя: </th>
+            <th>Фамилия: </th>
+            <th>Почта: </th>
+        </tr>
+        <tr th:each="s: ${students}">
+            <td th:text="${s.firstName}"></td>
+            <td th:text="${s.lastName}"></td>
+            <td th:text="${s.email}"></td>
+        </tr>
+    </table>
+
+    <h3>Присоединяйтесь к сообществу!</h3>
+    <form action="/students" method="post">
+        Имя: <input type="text" name="firstName"><br />
+        Фамилия: <input type="text" name="lastName"><br />
+        Почта: <input type="text" name="email"><br />
+        <button type="submit"> Зарегестрироваться! </button>
+    </form>
+</body>
+</html>

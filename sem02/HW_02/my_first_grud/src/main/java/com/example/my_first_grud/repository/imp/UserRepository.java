@@ -2,6 +2,7 @@ package com.example.my_first_grud.repository.imp;
 
 import com.example.my_first_grud.model.User;
 import com.example.my_first_grud.repository.iRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -10,14 +11,15 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Component
+@AllArgsConstructor
 public class UserRepository implements iRepository{
 
 
     private final JdbcTemplate jdbc;
 
-    public UserRepository(JdbcTemplate jdbc) {
-        this.jdbc = jdbc;
-    }
+//    public UserRepository(JdbcTemplate jdbc) {
+//        this.jdbc = jdbc;
+//    }
     @Override
     public List<User> findAll() {
         String sql = "SELECT * FROM userTable";
