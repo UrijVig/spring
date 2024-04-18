@@ -14,4 +14,4 @@
 
     > Шаблон для заполнения формы: [student-form.html](https://github.com/UrijVig/spring/blob/master/sem04/HW_04/HomeWork04/src/main/resources/templates/student-form.html)
 
-    > Файл для отображения стилей [style.css]()
+    > Файл для отображения стилей [style.css](https://github.com/UrijVig/spring/blob/master/sem04/HW_04/HomeWork04/src/main/resources/static/style.css)
