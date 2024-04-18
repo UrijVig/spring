@@ -15,11 +15,25 @@ import java.util.Random;
 public class StudentController {
     StudentRepository sr = new StudentRepository();
 
+    /**
+     * Метод для отображения списка студентов
+     *
+     * @param model модель представления Spring MVC
+     * @return шоблон страницы для отображения
+     */
     @GetMapping("/students")
     public String getStudents(Model model){
         model.addAttribute("students", sr.getAll());
         return "student-form";
     }
+
+    /**
+     * Метод для отображения списка студентов и добавлении нового студента в БД
+     *
+     * @param s - объект класса Student
+     * @param model модель представления Spring MVC
+     * @return шоблон страницы для отображения
+     */
     @PostMapping("/students")
     public String addStudent(Student s, Model model){
         sr.save(s);

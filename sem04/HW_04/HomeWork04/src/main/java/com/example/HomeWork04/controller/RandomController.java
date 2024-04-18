@@ -8,6 +8,12 @@ import java.util.Random;
 
 @Controller
 public class RandomController {
+    /**
+     * Метод для генерации случайного числа на странице
+     *
+     * @param model модель представления Spring MVC
+     * @return шаблон отображаемой страницы
+     */
     @GetMapping("/random")
     public String getRandomNumber(Model model){
         Random random = new Random();
