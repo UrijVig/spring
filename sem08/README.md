@@ -37,3 +37,6 @@
 ~~~
 3. Примените аннотацию @TrackUserAction к нескольким методам в слое [сервиса](https://github.com/UrijVig/spring/blob/master/sem02/HW_02/my_first_grud/src/main/java/com/example/my_first_grud/service/imp/UserService.java).
 4. Результаты регистрации в консоль
+
+
+Задание выполнено на базе прошлого [приложения](https://github.com/UrijVig/spring/tree/master/sem02/HW_02/my_first_grud) 
