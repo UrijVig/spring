@@ -1,5 +1,6 @@
 package com.example.my_first_grud.service.imp;
 
+import com.example.my_first_grud.aspect.TrackUserAction;
 import com.example.my_first_grud.model.User;
 
 import com.example.my_first_grud.repository.iRepository;
@@ -18,27 +19,29 @@ public class UserService implements iService{
 //        this.repository = userRepository;
 //    }
 
-
     public List<User> findAll(){
         return repository.findAll();
     }
 
+    @TrackUserAction
     public User saveUser(User user){
         return repository.save(user);
     }
 
+    @TrackUserAction
     public void deleteById(int id) {
         repository.deleteById(id);
     }
 
 
+    @TrackUserAction
     public User getUserById(int id) {
         return repository.getUserById(id);
     }
 
-    @Override
-    public void updateUserById(User user) {
-        repository.updateUserById(user);
+    @TrackUserAction
+    public User updateUserById(User user) {
+        return repository.updateUserById(user);
     }
 
 }

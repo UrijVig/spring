@@ -13,5 +13,5 @@ public interface iRepository {
 
     User getUserById(int id);
 
-    void updateUserById(User user);
+    User updateUserById(User user);
 }

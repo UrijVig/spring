@@ -64,9 +64,10 @@ public class UserRepository implements iRepository{
     }
 
     @Override
-    public void updateUserById(User user) {
+    public User updateUserById(User user) {
         String sql = "UPDATE userTable SET firstName = ?, lastName = ? WHERE id = ?";
         jdbc.update(sql, user.getFirstName(), user.getLastName(), user.getId());
+        return user;
     }
 
 
