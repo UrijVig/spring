@@ -4,3 +4,12 @@
 
 /sem02/HW_02/my_first_grud/.gitignore
 /.idea/
+/sem02/.idea/.gitignore
+/sem02/.idea/compiler.xml
+/sem02/.idea/encodings.xml
+/sem02/.idea/jarRepositories.xml
+/sem02/.idea/misc.xml
+/sem02/.idea/modules.xml
+/sem02/.idea/sem02.iml
+/sem02/.idea/uiDesigner.xml
+/sem02/.idea/vcs.xml
