@@ -13,3 +13,7 @@
 /sem02/.idea/sem02.iml
 /sem02/.idea/uiDesigner.xml
 /sem02/.idea/vcs.xml
+/sem09/microservice/gateway/.gitignore
+/sem09/microservice/.idea/.gitignore
+/sem09/microservice/eureka-server/.gitignore
+/sem09/microservice/.idea/
