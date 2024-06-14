@@ -2,6 +2,8 @@ package com.example.REST_API.controller;
 
 import com.example.REST_API.model.Note;
 import com.example.REST_API.service.NotesService;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.Metrics;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,8 @@ import java.util.List;
 public class NotesRestController {
 
     private final NotesService service;
+
+    private final Counter addNoneCounter = Metrics.counter("add_note_counter");
     /**
      * Создает новую заметку.
      * Принимает параметры из тела запроса и возвращает созданную заметку.
@@ -26,6 +30,7 @@ public class NotesRestController {
      */
     @PostMapping
     public ResponseEntity<Note> createNote(@RequestBody Note note){
+        addNoneCounter.increment();
         return new ResponseEntity<>(service.createNote(note), HttpStatus.CREATED);
     }
     /**
